@@ -10,12 +10,12 @@ import javax.servlet.ServletContext;
 public class ApplicationInitializer implements WebApplicationInitializer {
     @Override
     public void onStartup(jakarta.servlet.ServletContext servletContext){
-        try (var context = new AnnotationConfigApplicationContext()) {
+        var context = new AnnotationConfigApplicationContext();
             context.scan("ru.netology");
             context.refresh();
-        }
+
         final var servlet = new DispatcherServlet();
-        final var registration = servletContext.addServlet("app", String.valueOf(servlet));
+        final var registration = servletContext.addServlet("app", servlet);
         registration.setLoadOnStartup(1);
         registration.addMapping("/");
     }

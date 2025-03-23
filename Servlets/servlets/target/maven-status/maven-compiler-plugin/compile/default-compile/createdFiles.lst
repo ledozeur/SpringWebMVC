@@ -1,0 +1,8 @@
+ru\netology\initializer\ApplicationInitializer.class
+ru\netology\controller\PostController.class
+ru\netology\config\WebConfig.class
+ru\netology\exception\NotFoundException.class
+ru\netology\Main.class
+ru\netology\model\Post.class
+ru\netology\service\PostService.class
+ru\netology\repository\PostRepository.class
